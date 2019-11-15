@@ -23,9 +23,9 @@ param([String]$debugfile = "");
 
 if ($debugfile -eq "")
 {
-& "C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.0\common\bin\cspybat" -f "D:\6_workSpace\55_lora\4_node\3_ASR6505\7_code\ASR6505_AT_RELEASE_67\ASR6505_AT_RELEASE_uartwakeup\ASR6505_AT_RELEASE\Projects\LoRaATCmd\EWSTM8\settings\project.Debug.general.xcl" --backend -f "D:\6_workSpace\55_lora\4_node\3_ASR6505\7_code\ASR6505_AT_RELEASE_67\ASR6505_AT_RELEASE_uartwakeup\ASR6505_AT_RELEASE\Projects\LoRaATCmd\EWSTM8\settings\project.Debug.driver.xcl" 
+& "C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.0\common\bin\cspybat" -f "D:\6_workSpace\55_lora\4_node\3_ASR6505\7_code\github\asr6505_sdk_at_linkwan\Projects\LoRaATCmd\EWSTM8\settings\project.Debug.general.xcl" --backend -f "D:\6_workSpace\55_lora\4_node\3_ASR6505\7_code\github\asr6505_sdk_at_linkwan\Projects\LoRaATCmd\EWSTM8\settings\project.Debug.driver.xcl" 
 }
 else
 {
-& "C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.0\common\bin\cspybat" -f "D:\6_workSpace\55_lora\4_node\3_ASR6505\7_code\ASR6505_AT_RELEASE_67\ASR6505_AT_RELEASE_uartwakeup\ASR6505_AT_RELEASE\Projects\LoRaATCmd\EWSTM8\settings\project.Debug.general.xcl" --debug_file=$debugfile --backend -f "D:\6_workSpace\55_lora\4_node\3_ASR6505\7_code\ASR6505_AT_RELEASE_67\ASR6505_AT_RELEASE_uartwakeup\ASR6505_AT_RELEASE\Projects\LoRaATCmd\EWSTM8\settings\project.Debug.driver.xcl" 
+& "C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.0\common\bin\cspybat" -f "D:\6_workSpace\55_lora\4_node\3_ASR6505\7_code\github\asr6505_sdk_at_linkwan\Projects\LoRaATCmd\EWSTM8\settings\project.Debug.general.xcl" --debug_file=$debugfile --backend -f "D:\6_workSpace\55_lora\4_node\3_ASR6505\7_code\github\asr6505_sdk_at_linkwan\Projects\LoRaATCmd\EWSTM8\settings\project.Debug.driver.xcl" 
 }
