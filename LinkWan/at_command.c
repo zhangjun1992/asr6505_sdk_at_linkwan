@@ -560,6 +560,7 @@ static int at_cstatus_func(int opt, int argc, char *argv[])
     return ret;
 }
 
+//·¢ËÍÊı¾İ
 static int at_dtrx_func(int opt, int argc, char *argv[])
 {
     int ret = LWAN_ERROR;

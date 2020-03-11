@@ -567,7 +567,7 @@ bool RegionCN470ARxConfig( RxConfigParams_t *rxConfig, int8_t *datarate )
     *datarate = (uint8_t) dr;
     rxConfig->Frequency = frequency;
     
-    //DBG_LINKWAN("Rx, Freq %lu, DR %u, window %u\r\n", frequency, dr, rxConfig->RxSlot+1);
+    DBG_LINKWAN("Rx, Freq %lu, DR %u, window %u\r\n", frequency, dr, rxConfig->RxSlot+1);
     return true;
 }
 
@@ -618,8 +618,8 @@ bool RegionCN470ATxConfig( TxConfigParams_t *txConfig, int8_t *txPower, TimerTim
 
     *txPower = txConfig->TxPower;
 
-    //DBG_LINKWAN("Tx, Power: %d, Band %u, Freq: %lu,DR: %d, len: %u, duration %lu, at %lu\r\n",
-     //           phyTxPower, TxFreqBandNum, frequency, txConfig->Datarate, txConfig->PktLen, *txTimeOnAir, curTime);
+    DBG_LINKWAN("Tx, Power: %d, Band %u, Freq: %lu,DR: %d, len: %u, duration %lu, at %lu\r\n",
+                phyTxPower, TxFreqBandNum, frequency, txConfig->Datarate, txConfig->PktLen, *txTimeOnAir, curTime);
     return true;
 }
 

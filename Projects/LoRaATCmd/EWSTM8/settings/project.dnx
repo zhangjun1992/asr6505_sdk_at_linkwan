@@ -12,8 +12,14 @@
         <ByteLimit>50</ByteLimit>
     </Stack>
     <DebugChecksum>
-        <Checksum>1776751561</Checksum>
+        <Checksum>398705238</Checksum>
     </DebugChecksum>
+    <CallStack>
+        <ShowArgs>0</ShowArgs>
+    </CallStack>
+    <Disassembly>
+        <MixedMode>1</MixedMode>
+    </Disassembly>
     <DataSample>
         <LogEnabled>0</LogEnabled>
         <GraphEnabled>0</GraphEnabled>
@@ -28,11 +34,14 @@
         <LoggingEnabled>_ 0</LoggingEnabled>
         <LogFile>_ ""</LogFile>
     </TermIOLog>
-    <CallStack>
-        <ShowArgs>0</ShowArgs>
-    </CallStack>
     <Breakpoints>
-        <Count>0</Count>
+        <Bp0>_ "STD_CODE" "{D:\6_workSpace\55_lora\4_node\3_ASR6505\7_code\github\asr6505_sdk_at_linkwan\LinkWan\at_command.c}.1124.9" 0 0 0 0 "" 0 ""</Bp0>
+        <Bp1>_ "STD_CODE" "{$PROJ_DIR$\..\src\stm8l15x_it.c}.324.5" 1 0 0 0 "" 0 ""</Bp1>
+        <Bp2>_ "STD_CODE" "{$PROJ_DIR$\..\src\stm8l15x_it.c}.332.5" 1 0 0 0 "" 0 ""</Bp2>
+        <Bp3>_ "STD_CODE" "{D:\6_workSpace\55_lora\4_node\3_ASR6505\7_code\github\asr6505_sdk_at_linkwan\LinkWan\linkwan.c}.589.17" 1 0 0 0 "" 0 ""</Bp3>
+        <Bp4>_ "STD_CODE" "{D:\6_workSpace\55_lora\4_node\3_ASR6505\7_code\github\asr6505_sdk_at_linkwan\LinkWan\at_command.c}.581.23" 1 0 0 0 "" 0 ""</Bp4>
+        <Bp5>_ "STD_CODE" "{D:\6_workSpace\55_lora\4_node\3_ASR6505\7_code\github\asr6505_sdk_at_linkwan\LinkWan\at_command.c}.575.13" 1 0 0 0 "" 0 ""</Bp5>
+        <Count>6</Count>
     </Breakpoints>
     <Aliases>
         <Count>0</Count>

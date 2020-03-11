@@ -8,7 +8,7 @@
 #include <stdbool.h>
 #include <stdio.h>  
 
-#define LORAWAN_APP_DATA_BUFF_SIZE 130 //242
+#define LORAWAN_APP_DATA_BUFF_SIZE 52//130 //242  //130字节会导致发送数据错误
 #define LORAWAN_CONFIRMED_MSG 1
 #define LORAWAN_UNCONFIRMED_MSG 0
 #define JOINREQ_NBTRIALS 3    
