@@ -5,5 +5,12 @@
 
 其他：LoRa物联网群：753601669
 
-      芯片采购请联系 微信：longmanwzw
+芯片采购请联系 微信：longmanwzw
+
+#注意
+asr6505代码目前只支持class A和class C,不支持B模式  
+#修复日志
+#20202月13日
+修复class C连接linkwan平台接收下行数据的逻辑，目前class A 和class C能正常工作
+
 

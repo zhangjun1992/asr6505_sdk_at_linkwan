@@ -750,7 +750,7 @@
             <IarPane-34091>
                 <expressions>
                     <item>atcmd</item>
-                    <item></item>
+                    <item />
                 </expressions>
                 <col-names>
                     <item>Expression</item>

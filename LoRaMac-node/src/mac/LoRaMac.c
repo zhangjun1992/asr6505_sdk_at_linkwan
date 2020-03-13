@@ -678,7 +678,7 @@ static bool IsFPortAllowed( uint8_t fPort );
  */
 static void OpenContinuousRx2Window( void );
 
-static void OnRadioTxDone( void )
+static void OnRadioTxDone( void )   //Class C 模式接收窗口有問題   killer  class c
 {
     GetPhyParams_t getPhy;
     PhyParam_t phyParam;
@@ -691,12 +691,12 @@ static void OnRadioTxDone( void )
     }
     else
     {
-        OpenContinuousRx2Window( );
+        //OpenContinuousRx2Window( );  //如果是C类，打开窗口接收2
     }
     // Setup timers
     if( IsRxWindowsEnabled == true )
     {
-        TimerSetValue( &RxWindowTimer1, RxWindow1Delay );
+        TimerSetValue( &RxWindowTimer1, RxWindow1Delay );//串口1延时
         TimerStart( &RxWindowTimer1 );
         if( LoRaMacDeviceClass != CLASS_C )
         {
@@ -1662,6 +1662,12 @@ static void OnRxWindow1TimerEvent( void )
 
     RegionRxConfig( LoRaMacRegion, &RxWindow1Config, ( int8_t* )&McpsIndication.RxDatarate );
     RxWindowSetup( RxWindow1Config.RxContinuous, LoRaMacParams.MaxRxWindow );
+    //killer add
+    
+    if( LoRaMacDeviceClass == CLASS_C )
+    {
+        //OpenContinuousRx2Window();//
+    }
 }
 
 static void OnRxWindow2TimerEvent( void )
@@ -2350,8 +2356,10 @@ static bool IsFPortAllowed( uint8_t fPort )
 
 static void OpenContinuousRx2Window( void )
 {
+    DBG_LINKWAN("Class C open continuous rx2 window.\r\n");
     OnRxWindow2TimerEvent( );
     RxSlot = RX_SLOT_WIN_CLASS_C;
+    
 }
 
 LoRaMacStatus_t PrepareFrame( LoRaMacHeader_t *macHdr, LoRaMacFrameCtrl_t *fCtrl, uint8_t fPort, void *fBuffer, uint16_t fBufferSize )
