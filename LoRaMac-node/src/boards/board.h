@@ -26,7 +26,7 @@
 #include <stdint.h>
 #include <stdbool.h>
 
-#if 0
+#if 0                                //
 #define COMn                        1
 #define EVAL_COM1                   USART3
 #define EVAL_COM1_GPIO              GPIOG

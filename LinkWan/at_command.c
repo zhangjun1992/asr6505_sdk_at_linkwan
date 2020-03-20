@@ -310,19 +310,20 @@ static int at_cappkey_func(int opt, int argc, char *argv[])
 
     return ret;
 }
-
+uint32_t devaddr = 0;
+uint8_t buf[16];
 static int at_cdevaddr_func(int opt, int argc, char *argv[])
 {
     int ret = LWAN_ERROR;
     uint8_t length;
-    uint8_t buf[16];
-    uint32_t devaddr;
+
+   
         
     switch(opt) {
         case QUERY_CMD: {
             ret = LWAN_SUCCESS;
             lwan_dev_keys_get(DEV_KEYS_ABP_DEVADDR, &devaddr);
-            length = sprintf((char *)atcmd, "\r\n%s:%08X\r\nOK\r\n", LORA_AT_CDEVADDR, (unsigned int)devaddr);
+            length = sprintf((char *)atcmd, "\r\n%s:%04X%04X\r\nOK\r\n", LORA_AT_CDEVADDR, (uint16_t)(devaddr >> 16),(uint16_t)(devaddr));
             break;
         }
         case DESC_CMD: {
@@ -335,7 +336,11 @@ static int at_cdevaddr_func(int opt, int argc, char *argv[])
             
             length = hex2bin((const char *)argv[0], buf, 4);
             if (length == 4) {
-                uint32_t devaddr = buf[0] << 24 | buf[1] << 16 | buf[2] <<8 | buf[3];
+               // DBG_LINKWAN("argv[0]=%s\r\n",&argv[0]);
+                //DBG_LINKWAN("buf[0]=%02X,buf[1]=%02X,buf[2]=%02X,buf[3]=%02X\r\n",buf[0],buf[1],buf[2],buf[3]);
+                
+                devaddr = ((uint32_t)buf[0] << 24) | ((uint32_t)buf[1] << 16) | ((uint32_t)buf[2] <<8) | (uint32_t)buf[3];
+               // DBG_LINKWAN("devaddr=%04X%04X\r\n",devaddr & 0xFFFF0000);
                 if(lwan_dev_keys_set(DEV_KEYS_ABP_DEVADDR, &devaddr) == LWAN_SUCCESS) {
                     sprintf((char *)atcmd, "\r\nOK\r\n");
                     ret = LWAN_SUCCESS;

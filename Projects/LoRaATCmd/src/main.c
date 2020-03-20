@@ -33,7 +33,7 @@ static void LoraRxData( lora_AppData_t *AppData )
     AppData->Buff[AppData->BuffSize] = '\0';
     printf( "rx: port = %d, len = %d\r\n", AppData->Port, AppData->BuffSize);
     for (i = 0; i < AppData->BuffSize; i++) {
-        printf("0x%x ", AppData->Buff[i] );
+        printf("0x%c ", AppData->Buff[i] );
     }
     printf("\r\n");
 }

@@ -12,7 +12,7 @@
         <ByteLimit>50</ByteLimit>
     </Stack>
     <DebugChecksum>
-        <Checksum>398705238</Checksum>
+        <Checksum>1677160980</Checksum>
     </DebugChecksum>
     <CallStack>
         <ShowArgs>0</ShowArgs>
@@ -20,6 +20,9 @@
     <Disassembly>
         <MixedMode>1</MixedMode>
     </Disassembly>
+    <watch_formats>
+        <Fmt0>{W}1:g_lwan_dev_keys.abp.devaddr	4	0</Fmt0>
+    </watch_formats>
     <DataSample>
         <LogEnabled>0</LogEnabled>
         <GraphEnabled>0</GraphEnabled>
@@ -35,13 +38,14 @@
         <LogFile>_ ""</LogFile>
     </TermIOLog>
     <Breakpoints>
-        <Bp0>_ "STD_CODE" "{D:\6_workSpace\55_lora\4_node\3_ASR6505\7_code\github\asr6505_sdk_at_linkwan\LinkWan\at_command.c}.1124.9" 0 0 0 0 "" 0 ""</Bp0>
-        <Bp1>_ "STD_CODE" "{$PROJ_DIR$\..\src\stm8l15x_it.c}.324.5" 1 0 0 0 "" 0 ""</Bp1>
-        <Bp2>_ "STD_CODE" "{$PROJ_DIR$\..\src\stm8l15x_it.c}.332.5" 1 0 0 0 "" 0 ""</Bp2>
-        <Bp3>_ "STD_CODE" "{D:\6_workSpace\55_lora\4_node\3_ASR6505\7_code\github\asr6505_sdk_at_linkwan\LinkWan\linkwan.c}.589.17" 1 0 0 0 "" 0 ""</Bp3>
-        <Bp4>_ "STD_CODE" "{D:\6_workSpace\55_lora\4_node\3_ASR6505\7_code\github\asr6505_sdk_at_linkwan\LinkWan\at_command.c}.581.23" 1 0 0 0 "" 0 ""</Bp4>
-        <Bp5>_ "STD_CODE" "{D:\6_workSpace\55_lora\4_node\3_ASR6505\7_code\github\asr6505_sdk_at_linkwan\LinkWan\at_command.c}.575.13" 1 0 0 0 "" 0 ""</Bp5>
-        <Count>6</Count>
+        <Bp0>_ "STD_CODE" "{D:\6_workSpace\55_lora\4_node\3_ASR6505\7_code\github\asr6505_sdk_at_linkwan\LinkWan\at_command.c}.1129.9" 0 0 0 0 "" 0 ""</Bp0>
+        <Bp1>_ "STD_CODE" "{$PROJ_DIR$\..\src\stm8l15x_it.c}.324.5" 0 0 0 0 "" 0 ""</Bp1>
+        <Bp2>_ "STD_CODE" "{$PROJ_DIR$\..\src\stm8l15x_it.c}.332.5" 0 0 0 0 "" 0 ""</Bp2>
+        <Bp3>_ "STD_CODE" "{D:\6_workSpace\55_lora\4_node\3_ASR6505\7_code\github\asr6505_sdk_at_linkwan\LinkWan\at_command.c}.586.23" 0 0 0 0 "" 0 ""</Bp3>
+        <Bp4>_ "STD_CODE" "{D:\6_workSpace\55_lora\4_node\3_ASR6505\7_code\github\asr6505_sdk_at_linkwan\LinkWan\at_command.c}.580.13" 0 0 0 0 "" 0 ""</Bp4>
+        <Bp5>_ "STD_CODE" "{D:\6_workSpace\55_lora\4_node\3_ASR6505\7_code\github\asr6505_sdk_at_linkwan\LinkWan\at_command.c}.344.17" 1 0 0 0 "" 0 ""</Bp5>
+        <Bp6>_ "STD_CODE" "{D:\6_workSpace\55_lora\4_node\3_ASR6505\7_code\github\asr6505_sdk_at_linkwan\LinkWan\at_command.c}.325.13" 1 0 0 0 "" 0 ""</Bp6>
+        <Count>7</Count>
     </Breakpoints>
     <Aliases>
         <Count>0</Count>
