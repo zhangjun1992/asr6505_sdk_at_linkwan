@@ -1,7 +1,6 @@
 ## ASR6505 sdk
 该SDK是针对翱捷公司ASR6505单片机；该版本主要是支持linkwan平台，支持AT指令；，如需支持标准lorawan，请移步：https://github.com/zhangjun1992/asr6505_sdk_at_lorawan
 
-有问题：请联系 微信号：yankehu22   邮箱：yankehu22@163.com  QQ:1063903619 
 
 其他：LoRa物联网群：753601669
 
